@@ -34,6 +34,8 @@ const Header = () => (
                     padding-left: 10px;
                     padding-right: 10px;
 
+                    z-index: 1000;
+
                     background: rgb(71, 84, 232);
                     background: -webkit-linear-gradient(right, rgb(71, 84, 232), rgb(183, 71, 232),);
                     background: -o-linear-gradient(left, rgb(183, 71, 232), rgb(71, 84, 232));
@@ -57,7 +59,7 @@ const Header = () => (
                 a {
                     text-decoration: none;
                     color: white;
-                    font-family: 'robotoregular', Arial, sans-serif;
+                    font-family: 'Roboto', Arial, sans-serif;
                 }
 
                 a:hover {

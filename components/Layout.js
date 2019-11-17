@@ -13,6 +13,10 @@ const Layout = props => (
         <Head>
             <title>Jacob Hoffman</title>
             <style>{'body { background-color: rgb(39, 42, 43); margin: 0}'}</style>
+            
+            <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"></link>
+            <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet"></link>
+            <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto|Roboto+Mono&display=swap" rel="stylesheet"></link>
         </Head>
         <div style={layoutStyle}>
             <Header />
