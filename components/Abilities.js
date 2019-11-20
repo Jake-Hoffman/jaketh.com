@@ -2,33 +2,86 @@ import Link from 'next/link';
 
 function getInfo() {
     return [
-      { id: 'art-design', title: 'Art and Design' },
-      { id: 'software-development', title: 'Software Developement' },
-      { id: 'web-developement', title: 'Web Development' }
+    { id: 'software-development', title: 'Software Developement', 
+      imgURL: 'https://storage.cloud.google.com/jaketh/resources/Monster.jpg', 
+      info: 'Program design and development in C++, Java, and JavaScript using various frameworks and libraries'},
+      { id: 'web-developement', title: 'Web Development', 
+      imgURL: 'https://storage.cloud.google.com/jaketh/resources/Food.jpg', 
+      info: 'Program development for the web using JavaScript, CSS, HTML, and NoSQL, inlcuding use of various databases and online resources'},
+      { id: 'art-design', title: 'Art and Design', 
+      imgURL: 'https://storage.cloud.google.com/jaketh/resources/Worm.jpg', 
+      info: 'Logo design, conceptual art, and illustration using Adobe Photoshop, Adobe Illustrator, and traditional methods' },
     ];
 }
   
-const PostLink = ({ post }) => (
+const ProjectGroup = ({ post }) => (
 <div>
     
-    <div>
-        {/* <img src ="https://storage.cloud.google.com/jaketh/resources/Monster.jpg" /> */}
-        <div>
-
-        </div>
-        <div>
-            <Link href="/p/[id]" as={"/p/${post.id}"} class="basic-link info-box-link">
-                <a>{post.title}</a>
-            </Link>
-        </div>
+    <div id="outer">
+        <Link href="/p/[id]" as={`/p/${post.id}` } class="basic-link info-box-link">
+            <a>
+                <div alt={post.info} id="inner-image" style={{backgroundImage: "url(" + post.imgURL + ")"}}>
+                    <div id="inner-filter"></div>
+                    <h1 id="title">{post.title}</h1> 
+                    <p>
+                        {post.info}
+                    </p>
+                </div>
+            </a>
+        </Link>
     </div>
+    <div id="spacing"></div>
 
     <style jsx>{`
+    #spacing {
+        height: 2vh;
+    }
 
-    div{
-        display: flex;
-        margin-top: 64px;
-        justify-content: center;
+    p {
+        margin-left: 30%;;
+        width: 40%;
+        font-family: 'Roboto', 'Arial';
+        font-size: 1em;
+        z-index: 2;
+        position: relative;
+        top: -18vh;
+        text-align: center;
+    }
+
+    #title {
+        font-family: 'Roboto', 'Arial';
+        z-index: 2;
+        position: relative;
+        top: -30vh;
+        text-align: center;
+    }
+
+    #outer {
+        width: 100%;
+        // height: 40vh;
+        // background-color: rgb(68, 75, 76);
+    }
+
+    #inner-image {
+        height: 50vh;
+        width: 100%;
+
+        position: relative;
+        // opacity: 0.65;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #inner-filter {
+        z-index: 1;
+        color: white;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 0;
+        background-color: rgba(71, 84, 132, 0.49);
     }
 
     a {
@@ -36,7 +89,6 @@ const PostLink = ({ post }) => (
         color: white;
         // font-family: 'Montserrat', sans-serif;
         font-family: 'Roboto', 'Arial';
-        font-size: 2em;
     }
 
     a:hover {
@@ -52,14 +104,15 @@ const Abilities = () => (
         <div id="container-outer">
             <div id="container-inner">
                 {getInfo().map(post => (
-                <PostLink key={post.id} post={post} />
+                <ProjectGroup post={post} />
                 ))}
             </div>
         </div>
         <style jsx>{`
         #container-inner {
             display: flex;
-            flex-direction: column-reverse;
+            width: 100%;
+            flex-direction: column;
             justify-content: center;
             margin-top: 16px;
             position: relative;
@@ -68,10 +121,8 @@ const Abilities = () => (
         }
 
         #container-outer {
-            top: 95vh;
-
             position: relative;
-            height: 500px;
+            height: auto;
             width: 100%;
             z-index: 1;
 

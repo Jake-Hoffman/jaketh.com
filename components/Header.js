@@ -4,6 +4,8 @@ const linkStyle = {
     marginRight: 15
 };
 
+const headerLinks = ["Projects", "Portfolio"];
+
 const Header = () => (
 
     <div className = 'container'>
@@ -11,18 +13,18 @@ const Header = () => (
             <Link href="/">
                 <a style={linkStyle}>Jaketh.com</a>
             </Link>
-            <Link href="/about">
-                <a style={linkStyle}>Projects</a>
+            <Link href="/p/[id]" as={`/p/${headerLinks[0].toLowerCase()}`}>
+                <a style={linkStyle}>{headerLinks[0]}</a>
             </Link>
-            <Link href="/about">
-                <a style={linkStyle}>Portfolio</a>
+            <Link href="/p/[id]" as={`/p/${headerLinks[1].toLowerCase()}`}>
+                <a style={linkStyle}>{headerLinks[1]}</a>
             </Link>
             <Link href="/about">
                 <a style={linkStyle}>About</a>
             </Link>
         </div>
         <div>
-            <Link href="/about">
+            <Link href="/contact">
                 <a style={linkStyle}>Contact</a>
             </Link>
         </div>

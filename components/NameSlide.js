@@ -2,8 +2,7 @@ const NameSlide = () => (
 
         <div>
         <div id="main-image">
-            <img src="https://storage.cloud.google.com/jaketh/resources/Bigfoot.jpg" alt="Bigfoot" />
-            <div id="main-image-filter">&nbsp;
+           <div id="main-image-filter">&nbsp;
                 <h1>Jake Hoffman</h1>
             </div>
         </div>
@@ -47,22 +46,19 @@ const NameSlide = () => (
             opacity: 0.6;
             }
 
-            img {
-            display: relative;
-            margin: 0;
-            position: fixed;
-            z-index: -1;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            color: white;
-            object-fit: cover;
-            background-position: bottom;
-            background-attachment: fixed;
-            }
-
             #main-image {
+            height: 100vh;
+            width: 100%;
+    
+            position: relative;
+            // opacity: 0.65;
+            background-attachment: fixed;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+    
+            background-image: url("https://storage.cloud.google.com/jaketh/resources/Bigfoot.jpg");
+        
             position: relative;
             top 0;
             }
@@ -70,7 +66,7 @@ const NameSlide = () => (
             #main-image-filter {
             color: white;
             width: 100%;
-            height: 95vh;
+            height: 100vh;
             position: absolute;
             top: 0;
             background-color: rgba(71, 84, 132, 0.49);

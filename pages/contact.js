@@ -1,17 +1,15 @@
 import React from 'react';
 import Layout from '../components/Layout';
 
-export default function About() {
+export default function Contact() {
     return(
         <Layout>
-            <div id="about-container">
-
-
-                <h1 id="title">About</h1>
+            <div id="contact-container">
+                <h1 id="title">Contact</h1>
             </div>
             
             <style jsx>{`
-            #about-container {
+            #contact-container {
                 position: relative;
                 height: 100%;
             }
