@@ -4,20 +4,20 @@ const Footer = () => (
 
     <div>
         <div id="bottom-nav">
-            <div id="bottom-nav-item-1" class="bottom-nav-items">  
+            <div id="bottom-nav-item-1" className="bottom-nav-items">  
                 <p>©2019 Jacob Hoffman</p>      
             </div>
             <div id="bottom-nav-right">
-                <div id="bottom-nav-item-2" class="bottom-nav-items">
+                <div id="bottom-nav-item-2" className="bottom-nav-items">
                         <a href="https://www.instagram.com/jakethoffman/">Social Media</a>
                 </div>
-                <div id="bottom-nav-item-3" class="bottom-nav-items">
+                <div id="bottom-nav-item-3" className="bottom-nav-items">
                     <Link href="#">
                         <a>Contact&nbsp;&nbsp;|&nbsp;&nbsp;</a>
                     </Link>
                 </div>     
-                <div id="bottom-nav-item-3" class="bottom-nav-items">
-                    <Link>
+                <div id="bottom-nav-item-3" className="bottom-nav-items">
+                    <Link href="#">
                         <a>Resources&nbsp;&nbsp;|&nbsp;&nbsp;</a>
                     </Link>
                 </div>
@@ -36,11 +36,6 @@ const Footer = () => (
         p {
             position: relative;
             top: -10px;
-        }
-
-        a {
-            position: relative;
-            top: -4px;
         }
 
         #bottom-nav-right {
@@ -63,6 +58,7 @@ const Footer = () => (
             position: fixed;
             bottom: 0;
 
+            z-index: 0;
             margin-right: 50px;
 
             display: inline-flex;

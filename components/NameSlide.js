@@ -57,7 +57,7 @@ const NameSlide = () => (
             background-repeat: no-repeat;
             background-size: cover;
     
-            background-image: url("https://storage.cloud.google.com/jaketh/resources/Bigfoot.jpg");
+            background-image: url("https://storage.cloud.google.com/jaketh/resources/BigfootSmaller.jpg");
         
             position: relative;
             top 0;

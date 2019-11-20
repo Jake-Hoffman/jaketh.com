@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
+import Link from 'next/link';
 
 class Project {
     constructor(title, tags, description, image) {
@@ -21,16 +22,115 @@ function getAllProjects() {
 
     addToProjects("Personal Website", ["projects", "web-development", "portfolio"], 
     "The personal website of Jacob Hoffman",
-    "URL", projects);
+    "https://storage.cloud.google.com/jaketh/resources/FoodSmallest.jpg", projects);
     addToProjects("Game of Life", ["projects", "software-development"], 
     "A recreation of Conways \"Game of Life\" made in Java using Swing",
-    "URL", projects);
+    "https://storage.cloud.google.com/jaketh/resources/GameOfLife.png", projects);
+    addToProjects("Game of Life", ["projects", "software-development"], 
+    "A recreation of Conways \"Game of Life\" made in Java using Swing",
+    "https://storage.cloud.google.com/jaketh/resources/MonsterSmallest.jpg", projects);
+    addToProjects("Game of Life", ["projects", "software-development"], 
+    "A recreation of Conways \"Game of Life\" made in Java using Swing",
+    "https://storage.cloud.google.com/jaketh/resources/FoodSmallest.jpg", projects);
+    addToProjects("Game of Life", ["projects", "software-development"], 
+    "A recreation of Conways \"Game of Life\" made in Java using Swing",
+    "https://storage.cloud.google.com/jaketh/resources/MonsterSmallest.jpg", projects);
+    addToProjects("Game of Life", ["projects", "software-development"], 
+    "A recreation of Conways \"Game of Life\" made in Java using Swing",
+    "https://storage.cloud.google.com/jaketh/resources/FoodSmallest.jpg", projects);
+    addToProjects("Game of Life", ["projects", "software-development"], 
+    "A recreation of Conways \"Game of Life\" made in Java using Swing",
+    "https://storage.cloud.google.com/jaketh/resources/FoodSmallest.jpg", projects);
+
     return projects;
 }
 
 const ProjectPost = ({post}) => (
-    <div>
-        <h1>{post.title}</h1>
+    <div id="outest">
+      <Link href="/p/[id]" as={`/p/${post.id}` } >
+        <a>
+          <div id="container-outer">
+            <div id="image" style={{backgroundImage: "url(" + post.image + ")"}}>
+              <div id="inner-filter"></div>
+              <h1 id="title">{post.title}</h1>
+              <p id="post-description">{post.description}</p>
+            </div>
+            
+          </div>
+        </a>
+      </Link>
+      <style jsx>{`
+      #outest {
+        width: 33.33%;
+        width: calc(100%/3);
+        height: 33vw;
+        min-height: 262px;
+      }
+
+      #post-description {
+        font-family: 'Roboto', 'Arial';
+        color: white;
+        z-index: 0;
+        position: absolute;
+        bottom: 2%;
+        text-align: center;
+
+        margin-left: 20%;;
+        width: 60%;
+        font-size: 1em;
+      }
+
+      #title {
+        font-size: 3em;
+        font-family: 'Roboto', 'Arial';
+        color: white;
+        z-index: 0;
+        position: absolute;
+        bottom: 42%;
+        text-align: center;
+        margin-left: 3%;;
+        width: 94%;
+      }
+
+      #container-outer {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+
+      #image {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        background-color: rgba(71, 84, 132, 0.49);
+
+        text-align: center;
+      }
+
+      #inner-filter {
+        z-index: 0;
+        color: white;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 0;
+        background-color: rgba(71, 84, 132, 0.49);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover #inner-filter {
+      background-color: rgba(41, 54, 102, 0.49);
+    }
+      `}</style>
     </div>
 );
 
@@ -89,9 +189,13 @@ const ProjectGuide = () => {
       <div>
         <h1 id="title">{pageDescription.title}</h1>
         <p id="description">{pageDescription.description}</p>
-        {projects.map(post => (
-          <ProjectPost post={post} />
-          ))}
+
+        <div id="container">
+          {projects.map(post => (
+            <ProjectPost key={post.title} post={post} />
+            ))}
+        </div>
+        
       </div>
       <style jsx>{`
       #title {
@@ -109,6 +213,19 @@ const ProjectGuide = () => {
         font-family: 'Roboto', sans-serif;
         padding-left: 32px;
       }
+
+      #container {
+        padding-top: 16px;
+        padding-bottom: 10vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      #container>* {
+        flex: 1 1 160px;
+    }
       `}</style>
     </Layout>
   );
