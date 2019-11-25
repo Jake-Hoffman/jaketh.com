@@ -5,7 +5,7 @@ function getInfo() {
     { id: 'software-development', title: 'Software Developement', 
       imgURL: 'https://storage.cloud.google.com/jaketh/resources/MonsterSmallest.jpg', 
       info: 'Program design and development in C++, Java, and JavaScript using various frameworks and libraries'},
-      { id: 'web-developement', title: 'Web Development', 
+      { id: 'web-development', title: 'Web Development', 
       imgURL: 'https://storage.cloud.google.com/jaketh/resources/FoodSmallest.jpg', 
       info: 'Program development for the web using JavaScript, CSS, HTML, and NoSQL, inlcuding use of various databases and online resources'},
       { id: 'art-design', title: 'Art and Design', 
@@ -14,17 +14,17 @@ function getInfo() {
     ];
 }
   
-const ProjectGroup = ({ post }) => (
+const ProjectGroup = ({props}) => (
 <div>
     
     <div id="outer">
-        <Link href="/p/[id]" as={`/p/${post.id}` } >
+        <Link href="/p/[id]" as={`/p/${props.id}` } >
             <a>
-                <div alt={post.info} id="inner-image" style={{backgroundImage: "url(" + post.imgURL + ")"}}>
+                <div alt={props.info} id="inner-image" style={{backgroundImage: "url(" + props.imgURL + ")"}}>
                     <div id="inner-filter"></div>
-                    <h1 id="title">{post.title}</h1> 
+                    <h1 id="title">{props.title}</h1> 
                     <p>
-                        {post.info}
+                        {props.info}
                     </p>
                 </div>
             </a>
@@ -106,7 +106,7 @@ const Abilities = () => (
         <div id="container-outer">
             <div id="container-inner">
                 {getInfo().map(post => (
-                <ProjectGroup key={post.id} post={post} />
+                <ProjectGroup key={post.id} props = {post} />
                 ))}
             </div>
         </div>
