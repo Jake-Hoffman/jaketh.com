@@ -1,53 +1,11 @@
 import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
-
-class Project {
-    constructor(title, tags, description, image) {
-    this.title = title;
-    this.tags = tags;
-    this.description = description;
-    this.image = image;
-    }
-}
-
-function addToProjects(title, tags, description, image, projects) {
-    var project = new Project(title, tags, description, image);
-    projects.push(project);
-}
-
-function getAllProjects() {
-
-    var projects = [];
-
-    addToProjects("Personal Website", ["projects", "web-development", "portfolio"], 
-    "The personal website of Jacob Hoffman",
-    "https://storage.cloud.google.com/jaketh/resources/FoodSmallest.jpg", projects);
-    addToProjects("Game of Life", ["projects", "software-development"], 
-    "A recreation of Conways \"Game of Life\" made in Java using Swing",
-    "https://storage.cloud.google.com/jaketh/resources/GameOfLife.png", projects);
-    addToProjects("Game of Life", ["projects", "software-development"], 
-    "A recreation of Conways \"Game of Life\" made in Java using Swing",
-    "https://storage.cloud.google.com/jaketh/resources/MonsterSmallest.jpg", projects);
-    addToProjects("Game of Life", ["projects", "software-development"], 
-    "A recreation of Conways \"Game of Life\" made in Java using Swing",
-    "https://storage.cloud.google.com/jaketh/resources/FoodSmallest.jpg", projects);
-    addToProjects("Game of Life", ["projects", "software-development"], 
-    "A recreation of Conways \"Game of Life\" made in Java using Swing",
-    "https://storage.cloud.google.com/jaketh/resources/MonsterSmallest.jpg", projects);
-    addToProjects("Game of Life", ["projects", "software-development"], 
-    "A recreation of Conways \"Game of Life\" made in Java using Swing",
-    "https://storage.cloud.google.com/jaketh/resources/FoodSmallest.jpg", projects);
-    addToProjects("Game of Life", ["projects", "software-development"], 
-    "A recreation of Conways \"Game of Life\" made in Java using Swing",
-    "https://storage.cloud.google.com/jaketh/resources/FoodSmallest.jpg", projects);
-
-    return projects;
-}
+import getAllProjects from '../../components/GetProjects'
 
 const ProjectPost = ({post}) => (
     <div id="outest">
-      <Link href="/p/[id]" as={`/p/${post.id}` } >
+      <Link href="/projects/[title]" as={`/projects/${post.title}` } >
         <a>
           <div id="container-outer">
             <div id="image" style={{backgroundImage: "url(" + post.image + ")"}}>
@@ -100,7 +58,7 @@ const ProjectPost = ({post}) => (
 
       #image {
         background-attachment: fixed;
-        background-position: center;
+        background-position: right;
         background-repeat: no-repeat;
         background-size: cover;
 
@@ -158,7 +116,7 @@ const ProjectGuide = () => {
               description: "All software developed by Jake Hoffman"
             }
           break;
-        case "web-developement":
+        case "web-development":
             pageDescription = {
               title: "Web Based Projects",
               description: "All projects based on the web by Jake Hoffman"
@@ -231,8 +189,8 @@ const ProjectGuide = () => {
   );
 };
 
-// ProjectGuide.getInitialProps = async () => {
-//   return {};
-// }
+ProjectGuide.getInitialProps = async () => {
+  return {};
+}
 
 export default ProjectGuide;
