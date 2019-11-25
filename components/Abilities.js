@@ -44,7 +44,7 @@ const ProjectGroup = ({props}) => (
         font-size: 1em;
         z-index: 2;
         position: relative;
-        top: -18vh;
+        bottom: 44%;
         text-align: center;
     }
 
@@ -52,19 +52,20 @@ const ProjectGroup = ({props}) => (
         font-family: 'Roboto', 'Arial';
         z-index: 2;
         position: relative;
-        top: -30vh;
+        top: -60%;
         text-align: center;
     }
 
     #outer {
         z-index: 2;
         width: 100%;
-        // height: 40vh;
+        height: 50vh;
+        min-height: 380px;
         // background-color: rgb(68, 75, 76);
     }
 
     #inner-image {
-        height: 50vh;
+        height: 100%;
         width: 100%;
         z-index: 2;
 
@@ -87,6 +88,7 @@ const ProjectGroup = ({props}) => (
     }
 
     a {
+        min-height: 380px;
         text-decoration: none;
         color: white;
         // font-family: 'Montserrat', sans-serif;
