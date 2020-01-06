@@ -20,7 +20,7 @@ export default function Projects() {
     <Layout>
       <div>
         <h1 id="title">{title}</h1>
-        {project.page}
+        {/* {project.page} */}
       </div>
       <style jsx>{`
       #title {

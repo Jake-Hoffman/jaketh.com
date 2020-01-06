@@ -9,9 +9,9 @@ export default function Contact() {
 
                 <div id ="contact-info">
                     <ul id ="field">
-                        <li> Name.................................Jacob Hoffman </li>
-                        <li> E-mail.....................jthoffman@liberty.edu </li>
-                        <li> Phone...................................610-413-7348 </li>
+                        {/* <li> Name.................................Jake Hoffman </li>
+                        <li> E-mail.....................</li>
+                        <li> Phone................................... </li> */}
                     </ul>
                 </div>
             </div>

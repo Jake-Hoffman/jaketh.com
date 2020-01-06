@@ -5,21 +5,23 @@ const Footer = () => (
     <div>
         <div id="bottom-nav">
             <div id="bottom-nav-item-1" className="bottom-nav-items">  
-                <p>©2019 Jacob Hoffman</p>      
+                <p>©2019 Jake Hoffman</p>      
             </div>
             <div id="bottom-nav-right">
                 <div id="bottom-nav-item-2" className="bottom-nav-items">
-                        <a href="https://www.instagram.com/jakethoffman/">Social Media</a>
+                        <a href="https://www.instagram.com/jakethoffman/" id="instagram-icon">
+                            <img src="https://storage.googleapis.com/jaketh/resources/instagram-glyph.svg"/>
+                        </a>
                 </div>
-                <div id="bottom-nav-item-3" className="bottom-nav-items">
-                    <Link href="#">
-                        <a>Contact&nbsp;&nbsp;|&nbsp;&nbsp;</a>
-                    </Link>
+                <div className="bottom-nav-items">
+                    <a href="https://github.com/Jacob-Hoffman" id="github-icon">
+                        <img src="https://storage.googleapis.com/jaketh/resources/Github%20Mark.svg"/>
+                    </a>
                 </div>     
                 <div id="bottom-nav-item-3" className="bottom-nav-items">
-                    <Link href="#">
-                        <a>Resources&nbsp;&nbsp;|&nbsp;&nbsp;</a>
-                    </Link>
+                    <a href="https://github.com/Jacob-Hoffman" id="linkedin-icon">
+                        <img src="https://storage.googleapis.com/jaketh/resources/LI-In-Bug.svg"/>
+                    </a>
                 </div>
             </div>
         </div>
@@ -27,7 +29,6 @@ const Footer = () => (
 
         p, a {
             font-family: 'Roboto', sans-serif;
-            font-size: 8pt;
             color: white;
             text-decoration: none;
             font-weight: 0;
@@ -54,7 +55,7 @@ const Footer = () => (
             padding-bottom: 8px;
             padding-left: 16px;
             width: 100%;
-            height: 12px;
+            height: 28px;
             position: fixed;
             bottom: 0;
 
@@ -69,21 +70,32 @@ const Footer = () => (
         .bottom-nav-items {
             display: inline-flex;
         }
-        
-        // #bottom-nav-item-1 {
-        //     padding-left: 16px;
-        //     float: left;
-            
-        // }
+
+        #bottom-nav-item-1 {
+            font-size: 16px;
+        }
         
         #bottom-nav-item-2 {
             padding-right: 32px;    
             float: right;
         }
+
+        #instagram-icon {
+            padding-left: 16px;
+            width: 28px;
+            height: 28px;
+        }
         
-        // #bottom-nav-item-3 {
-        //     float: right;
-        // }
+        #github-icon {
+            padding-left: 16px;
+            width: 28px;
+        }
+
+        #linkedin-icon {
+            padding-left: 16px;
+            width: 28px;
+            height: 28px;
+        }
         `}</style>
     </div>
     

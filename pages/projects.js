@@ -8,8 +8,7 @@ const ProjectPost = ({post}) => (
       <Link href="/projects/[title]" as={`/projects/${post.title}` } >
         <a>
           <div id="container-outer">
-              <h1 id="title">{post.title}</h1>
-              <p id="post-description">-{post.description}</p>
+              <p id="post-description">{post.title} - {post.description}</p>
             
           </div>
         </a>
@@ -27,13 +26,6 @@ const ProjectPost = ({post}) => (
         color: white;
         z-index: 0;
         font-size: 1em;
-      }
-
-      #title {
-        font-size: 1.5em;
-        font-family: 'Roboto', 'Arial';
-        color: white;
-        z-index: 0;
       }
 
       #container-outer {

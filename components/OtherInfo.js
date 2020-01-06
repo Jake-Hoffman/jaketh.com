@@ -19,6 +19,7 @@ const OtherInfo = () => (
             #p-container {
                 margin-left: 15%;
                 width: 70%;
+                padding-bottom: 15%;
             }
 
             p {
@@ -35,10 +36,6 @@ const OtherInfo = () => (
                 color: white;
                 padding-top: 20vh;
                 text-align: center;
-            }
-
-            #info-box {
-                height: 80vh;
             }
         `}</style>
     </div>

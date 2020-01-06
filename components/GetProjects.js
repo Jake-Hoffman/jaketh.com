@@ -19,45 +19,17 @@ const getAllProjects = () => {
 
     addToProjects("Personal Website", ["projects", "web-development", "portfolio"], 
     "The personal website of Jacob Hoffman",
-    "https://storage.cloud.google.com/jaketh/resources/BigfootSmaller.jpg", projects,
+    "https://storage.googleapis.com/jaketh/resources/BigfootSmaller.jpg", projects,
     <div>hello</div>
     );
 
     addToProjects("Game of Life", ["projects", "software-development"], 
     "A recreation of Conways \"Game of Life\" made in Java using Swing",
-    "https://storage.cloud.google.com/jaketh/resources/BetterGameOfLife.png", projects,
+    "https://storage.googleapis.com/jaketh/resources/BetterGameOfLife.png", projects,
     <div>hello</div>
     );
 
-    addToProjects("Game of Life", ["projects", "web-development"], 
-    "A recreation of Conways \"Game of Life\" made in Java using Swing",
-    "https://storage.cloud.google.com/jaketh/resources/BirdWithArms.jpg", projects,
-    <div>hello</div>
-    );
-
-    addToProjects("Game of Life", ["projects", "software-development"], 
-    "A recreation of Conways \"Game of Life\" made in Java using Swing",
-    "https://storage.cloud.google.com/jaketh/resources/FoodSmallest.jpg", projects,
-    <div>hello</div>
-    );
-
-    addToProjects("Game of Life", ["projects", "software-development"], 
-    "A recreation of Conways \"Game of Life\" made in Java using Swing",
-    "https://storage.cloud.google.com/jaketh/resources/MonsterSmallest.jpg", projects,
-    <div>hello</div>
-    );
-
-    addToProjects("Game of Life", ["projects", "software-development"], 
-    "A recreation of Conways \"Game of Life\" made in Java using Swing",
-    "https://storage.cloud.google.com/jaketh/resources/FoodSmallest.jpg", projects,
-    <div>hello</div>
-    );
-
-    addToProjects("Game of Life", ["projects", "art-design"], 
-    "A recreation of Conways \"Game of Life\" made in Java using Swing",
-    "https://storage.cloud.google.com/jaketh/resources/FoodSmallest.jpg", projects,
-    <div>hello</div>
-    );
+    
 
     return projects;
 }

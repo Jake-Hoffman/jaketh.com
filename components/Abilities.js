@@ -3,13 +3,13 @@ import Link from 'next/link';
 function getInfo() {
     return [
     { id: 'software-development', title: 'Software Developement', 
-      imgURL: 'https://storage.cloud.google.com/jaketh/resources/MonsterSmallest.jpg', 
+      imgURL: 'https://storage.googleapis.com/jaketh/resources/MonsterSmallest.jpg', 
       info: 'Program design and development in C++, Java, and JavaScript using various frameworks and libraries'},
       { id: 'web-development', title: 'Web Development', 
-      imgURL: 'https://storage.cloud.google.com/jaketh/resources/FoodSmallest.jpg', 
+      imgURL: 'https://storage.googleapis.com/jaketh/resources/FoodSmallest.jpg', 
       info: 'Program development for the web using JavaScript, CSS, HTML, and NoSQL, inlcuding use of various databases and online resources'},
       { id: 'art-design', title: 'Art and Design', 
-      imgURL: 'https://storage.cloud.google.com/jaketh/resources/WormSmallest.jpg', 
+      imgURL: 'https://storage.googleapis.com/jaketh/resources/WormSmallest.jpg', 
       info: 'Logo design, conceptual art, and illustration using Adobe Photoshop, Adobe Illustrator, and traditional methods' },
     ];
 }

@@ -113,31 +113,25 @@ const ProjectGuide = () => {
         case "software-development":
             pageDescription = {
               title: "Software Based Projects",
-              description: "All software developed by Jake Hoffman"
+              description: "Software developed by Jake Hoffman"
             }
           break;
         case "web-development":
             pageDescription = {
               title: "Web Based Projects",
-              description: "All projects based on the web by Jake Hoffman"
-            }
-          break;
-        case "portfolio":
-            pageDescription = {
-              title: "Design Based Projects",
-              description: "All design based projects including websites by Jake Hoffman"
+              description: "Web based projects by Jake Hoffman"
             }
           break;
         case "art-design":
             pageDescription = {
               title: "Illustration and Logo Design Projects",
-              description: "All purely creative projects by Jake Hoffman"
+              description: "Creative projects by Jake Hoffman"
             }
           break;
         default: 
         pageDescription = {
           title: "All Projects",
-          description: "A comprehensive list of all projects by Jake Hoffman"
+          description: "List of all projects by Jake Hoffman"
         }
         break;
     }
