@@ -14,12 +14,12 @@ const Footer = () => (
                         </a>
                 </div>
                 <div className="bottom-nav-items">
-                    <a href="https://github.com/Jacob-Hoffman" id="github-icon">
+                    <a href="https://github.com/Jake-Hoffman" id="github-icon">
                         <img src="https://storage.googleapis.com/jaketh/resources/Github%20Mark.svg"/>
                     </a>
                 </div>     
                 <div id="bottom-nav-item-3" className="bottom-nav-items">
-                    <a href="https://github.com/Jacob-Hoffman" id="linkedin-icon">
+                    <a href="https://www.linkedin.com/in/jacob-t-hoffman/" id="linkedin-icon">
                         <img src="https://storage.googleapis.com/jaketh/resources/LI-In-Bug.svg"/>
                     </a>
                 </div>

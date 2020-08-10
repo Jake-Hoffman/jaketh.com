@@ -17,7 +17,7 @@ const getAllProjects = () => {
 
     var projects = [];
 
-    addToProjects("Personal Website", ["projects", "web-development", "portfolio"], 
+    addToProjects("Personal Website", ["projects", "web-development"], 
     "The personal website of Jacob Hoffman",
     "https://storage.googleapis.com/jaketh/resources/BigfootSmaller.jpg", projects,
     <div>hello</div>
@@ -29,7 +29,17 @@ const getAllProjects = () => {
     <div>hello</div>
     );
 
-    
+    addToProjects("Collision Simulator", ["projects", "software-development"], 
+    "Calculating PI using collisions; Based on research paper",
+    "https://storage.googleapis.com/jaketh/resources/CollisionSimulator.png", projects,
+    <div>hello</div>
+    );
+
+    addToProjects("Fluid Simulator", ["projects", "software-development"], 
+    "Basic fluid simulator based on research paper",
+    "https://storage.googleapis.com/jaketh/resources/FluidSimulator.png", projects,
+    <div>hello</div>
+    );
 
     return projects;
 }

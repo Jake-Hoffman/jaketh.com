@@ -20,6 +20,13 @@
 # misc
 .DS_Store
 .env*
+/.firebase
+/.vscode
+.babelrc
+.firebaserc
+firebase.json
+package.json
+package-lock.json
 
 # debug
 npm-debug.log*
